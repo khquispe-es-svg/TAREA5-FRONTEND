@@ -2,7 +2,8 @@
 import { useEffect, useState } from 'react'
 import Product3DViewer from './components/Product3DViewer'
 
-const API_URL = 'https://trading-space-api-5ex6.onrender.com/api/v1/products'
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://trading-space-api-5ex6.onrender.com'
+const API_URL = `${API_BASE_URL}/api/v1/products`
 
 function App() {
   const [products, setProducts] = useState([])
